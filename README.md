@@ -32,7 +32,7 @@ Através da combinação de dados de hazard (perigo), exposição (ativos) e fun
 
 ├── data/
 
-│      ├── raw/     # Dados de entrada originais (NetCDF,shapefiles, CSVs)
+│            ├── raw/     # Dados de entrada originais (NetCDF,shapefiles, CSVs)
 
 │   │   ├── atmospheric_forecasts/ # Ex: wrf_d01_2025062900.nc
 
