@@ -31,8 +31,11 @@ Através da combinação de dados de hazard (perigo), exposição (ativos) e fun
 # Estrutura do Repositório
 
 ├── data/
+
 │   ├── raw/     # Dados de entrada originais (NetCDF,shapefiles, CSVs)
+
 │   │   ├── atmospheric_forecasts/ # Ex: wrf_d01_2025062900.nc
+
 │   │   ├── ocean_wave_data/       # Ex: ww3_2025063000_grid3.nc
 │   │   └── exposure/ # Dados de exposição (locais,rotas/posições)
 │   │       ├── offices.geojson/offices.csv # Ex: Localização das sedes
