@@ -32,32 +32,56 @@ Através da combinação de dados de hazard (perigo), exposição (ativos) e fun
 
 ├── data/
 
-│   ├── raw/     # Dados de entrada originais (NetCDF,shapefiles, CSVs)
+│      ├── raw/     # Dados de entrada originais (NetCDF,shapefiles, CSVs)
 
 │   │   ├── atmospheric_forecasts/ # Ex: wrf_d01_2025062900.nc
 
 │   │   ├── ocean_wave_data/       # Ex: ww3_2025063000_grid3.nc
+
 │   │   └── exposure/ # Dados de exposição (locais,rotas/posições)
+
 │   │       ├── offices.geojson/offices.csv # Ex: Localização das sedes
+
 │   │       └── vessels.geojson/vessels.csv # Ex: Rotas/pontos de interesse
+
 │   └── processed/  # Dados intermediários/CLIMADA objects salvos (Hazards, Exposures)
+
 │       ├── hazards/ # Objetos Hazard serializados(ex: hazard_waves.hdf5, hazard_winds.hdf5)
+
 │       └── exposures/       # Objetos Exposures serializados
+
 ├── scripts/
+
 │   ├── 01_process_hazard_data.py  # Script para carregar NetCDFs e criar Hazard objects
+
 │   ├── 02_prepare_exposure.py     # Script para criar Exposures objects das sedes e embarcações
+
 │   ├── 03_define_impact_funcs.py  # Script para definir funções de impacto/vulnerabilidade
+
 │   ├── 04_run_climada_analysis.py # Script principal para executar o cálculo de impacto
+
 │   ├── utils.py                   # Funções auxiliares ou de plotagem
+
 ├── notebooks/
+
 │   ├── 01_eda_hazard_data.ipynb     # Análise exploratória dos dados NetCDF
+
 │   ├── 02_climada_workflow_example.ipynb # Demonstração passo a passo do fluxo CLIMADA
+
 │   └── 03_risk_and_adaptation_analysis.ipynb # Análise aprofundada de risco e medidas de adaptação
+
 ├── results/
+
 │   ├── figures/              # Gráficos e visualizações gerados
+
 │   ├── reports/              # Relatórios de análise (PDF, HTML)
+
 │   └── impact_output/    # Dados de impacto brutos ou agregados (CSV, HDF5)
+
 ├── .gitignore    # Arquivo para o Git ignorar arquivos/pastas (ex:.ipynb_checkpoints,__pycache__,grandes arquivos de dados)
+
 ├── README.md                 # Este arquivo
+
 ├── environment.yml           # Definição do ambiente Conda (recomendado)
+
 └── requirements.txt          # Alternativa para pip (se não usar Conda)
